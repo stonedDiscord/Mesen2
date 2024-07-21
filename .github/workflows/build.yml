@@ -165,7 +165,7 @@ jobs:
       # forcing colours makes the log a little nicer to read.
       - name: Build Mesen
         run: |
-          make -j$(sysctl -n hw.logicalcpu) -O ${{ matrix.make_flags }}
+          ${{ matrix.make_flags }} make -j$(sysctl -n hw.logicalcpu)
 
       - name: Sign binary
         env:
