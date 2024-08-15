@@ -51,6 +51,9 @@ endif
 ifneq ($(filter arm%,$(MACHINE)),)
 	MESENPLATFORM := $(MESENOS)-arm64
 endif
+ifneq ($(filter aarch%,$(MACHINE)),)
+	MESENPLATFORM := $(MESENOS)-arm64
+endif
 
 MESENFLAGS += -m64
 
